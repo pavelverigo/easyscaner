@@ -1,0 +1,9 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+
+AccessModifierOffset: -2
+ColumnLimit: 120
+DerivePointerAlignment: false
+PointerAlignment: Left
+...

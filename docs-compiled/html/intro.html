@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. ﻿Introduction &mdash; QuickScaner 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Python API" href="pyscaner.html" />
+    <link rel="prev" title="﻿EasyScaner" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QuickScaner
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. ﻿Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about">1.1. About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup">1.2. Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visual-studio">1.2.1. Visual Studio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-executables">1.2.2. Use executables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-python">1.2.3. Use Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-documentation">1.2.4. Build documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-and-setup-doxygen">1.2.4.1. Download and setup Doxygen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#download-and-setup-python">1.2.4.2. Download and setup Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#download-and-setup-python-modules">1.2.4.3. Download and setup Python modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-documentation">1.2.4.4. Generate documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#support">1.3. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyscaner.html">2. Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.API.html">2.1. pyscaner.API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.SensorWaitMode.html">2.2. pyscaner.SensorWaitMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.Vehicle.html">2.3. pyscaner.Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.VType.html">2.4. pyscaner.VType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.CruiseControlMode.html">2.5. pyscaner.CruiseControlMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.Indicator.html">2.6. pyscaner.Indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.LightsInfo.html">2.7. pyscaner.LightsInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.NumericalCommand.html">2.8. pyscaner.NumericalCommand</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cpp.html">3. C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpp.html#vehicle">3.1. Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp.html#scaner">3.2. Scaner</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html">4. Samples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="samples.html#python-samples">4.1. Python samples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#getinfo-py">4.1.1. <code class="docutils literal notranslate"><span class="pre">getinfo.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#change-lane-py">4.1.2. <code class="docutils literal notranslate"><span class="pre">change_lane.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#decelerate-py">4.1.3. <code class="docutils literal notranslate"><span class="pre">decelerate.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#display-message-py">4.1.4. <code class="docutils literal notranslate"><span class="pre">display_message.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#idm-py">4.1.5. <code class="docutils literal notranslate"><span class="pre">IDM+.py</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="samples.html#c-samples">4.2. C++ samples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#changelane-cpp">4.2.1. <code class="docutils literal notranslate"><span class="pre">ChangeLane.cpp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#decelerate-cpp">4.2.2. <code class="docutils literal notranslate"><span class="pre">Decelerate.cpp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#helloworld-cpp">4.2.3. <code class="docutils literal notranslate"><span class="pre">HelloWorld.cpp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="samples.html#idm-cpp">4.2.4. <code class="docutils literal notranslate"><span class="pre">IDM+.cpp</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">5. ﻿FAQ / Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#difference-between-vehicles-and-road-vehicles-in-api">5.1. Difference between <code class="docutils literal notranslate"><span class="pre">vehicles</span></code> and <code class="docutils literal notranslate"><span class="pre">road_vehicles</span></code> in API.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#modulenotfounderror-no-module-named-pyscaner">5.2. ModuleNotFoundError: No module named ‘pyscaner’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#cmake-studio-dir-environment-varible-is-not-found">5.3. CMake STUDIO_DIR environment varible is not found.</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QuickScaner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">1. </span>﻿Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/intro.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1><span class="section-number">1. </span>﻿Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h1>
+<section id="about">
+<h2><span class="section-number">1.1. </span>About<a class="headerlink" href="#about" title="Permalink to this headline"></a></h2>
+<p>The software is meant to be used with the SCANeR software developed by AVSimulation. It allows you to have the autonomous vehicles in SCANeR adhere to more realistic and complex traffic models rather than the default behaviour that AVSimulation has implemented.
+The client deemed this necessary, as the default implementation for the autonomous vehicles is simplistic and unrealistic. This application should fix that problem when used correctly, which allows our client to perform more realistic experiments.</p>
+<p>The software was developed by a team of TU Delft students as part of their Computer Science and Engineering studies.
+The team members are Ties Bloemen, Oisín Hageman, Pavel Verigo, Medard Svilvásy, and Brent Meeusen.</p>
+</section>
+<section id="setup">
+<h2><span class="section-number">1.2. </span>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h2>
+<p>This section describes how to install the necessary programs and tools to use the application, and to continue development.
+It is written for a Windows machine with Visual Studio as IDE.
+Other setups might work, but are not tested and are likely to differ in installation.</p>
+<section id="visual-studio">
+<h3><span class="section-number">1.2.1. </span>Visual Studio<a class="headerlink" href="#visual-studio" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>Download the latest <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span></code> from <a class="reference external" href="https://visualstudio.microsoft.com/">this page</a>.</p></li>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">Installer</span></code>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Modify</span></code> in the <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">[version]</span></code> section. In this guide, <code class="docutils literal notranslate"><span class="pre">[version]</span></code> is <code class="docutils literal notranslate"><span class="pre">Community</span> <span class="pre">2019</span></code>.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Desktop</span> <span class="pre">development</span> <span class="pre">with</span> <span class="pre">C++</span></code>. Select your install process, then click <code class="docutils literal notranslate"><span class="pre">Modify</span></code>. Wait for the tools to be downloaded and installed.</p></li>
+<li><p>Open your <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span></code> version. Choose <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">a</span> <span class="pre">local</span> <span class="pre">folder</span></code> and select the project.</p></li>
+</ol>
+<p>To build executables, in the top bar click <code class="docutils literal notranslate"><span class="pre">Build</span></code>,then choose <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">all</span></code> to build the changed files or <code class="docutils literal notranslate"><span class="pre">Rebuild</span> <span class="pre">all</span></code> to rebuild every executable.</p>
+</section>
+<section id="use-executables">
+<h3><span class="section-number">1.2.2. </span>Use executables<a class="headerlink" href="#use-executables" title="Permalink to this headline"></a></h3>
+<p>After building the executables, you should add them as a process in SCANeR.</p>
+<ol class="arabic simple">
+<li><p>In SCANeR, click “Configuration” and “Configuration Manager…”, which will open a Configuration Manager window.</p></li>
+<li><p>Click “Add Process” in the bottom left.</p></li>
+<li><p>In the Process Parameters section, select the correct executable. If you wish, you can change the process name afterwards as well. Click “Add”, then “Close”.</p></li>
+<li><p>Click “Apply”, then “OK” in the Configuration Manager window.</p></li>
+</ol>
+<p>When starting a simulation, make sure that your newly added process is also running.
+If it is, congratulations! The simulation now uses your process.</p>
+</section>
+<section id="use-python">
+<h3><span class="section-number">1.2.3. </span>Use Python<a class="headerlink" href="#use-python" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>Use the Command Prompt to start your Python script. How this is done is dependent on how Python is installed on your system.</p></li>
+<li><p>Open SCANeR and start the simulation.</p></li>
+</ol>
+<p>Your Python snippet should now influence the simulation.</p>
+</section>
+<section id="build-documentation">
+<h3><span class="section-number">1.2.4. </span>Build documentation<a class="headerlink" href="#build-documentation" title="Permalink to this headline"></a></h3>
+<p>Our documentation is generated through <code class="docutils literal notranslate"><span class="pre">Doxygen</span></code> and <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>.
+Here, we will explain how to generate a new documentation.
+This is only necessary if the code and the comments were changed. You will not need this when using the application.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Follow the guides below in the order they are presented in.
+Some of them require the guides above to be completed successfully.</p>
+</div>
+<section id="download-and-setup-doxygen">
+<span id="id1"></span><h4><span class="section-number">1.2.4.1. </span>Download and setup Doxygen<a class="headerlink" href="#download-and-setup-doxygen" title="Permalink to this headline"></a></h4>
+<ol class="arabic simple">
+<li><p>Download <code class="docutils literal notranslate"><span class="pre">Doxygen</span></code> <a class="reference external" href="https://doxygen.nl/download.html">here</a>.</p></li>
+<li><dl class="simple">
+<dt>Add the executable to the <code class="docutils literal notranslate"><span class="pre">Path</span></code> environment variable.</dt><dd><ol class="arabic simple">
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">System</span> <span class="pre">&gt;</span> <span class="pre">About</span></code>.</p></li>
+<li><p>Scroll down, and click <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">system</span> <span class="pre">settings</span></code>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Environment</span> <span class="pre">variables...</span></code>.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Path</span></code> in either <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">variables</span> <span class="pre">for</span> <span class="pre">[user]</span></code> or <code class="docutils literal notranslate"><span class="pre">System</span> <span class="pre">variables</span></code>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Edit</span></code>. In the new window, click <code class="docutils literal notranslate"><span class="pre">New</span></code>.</p></li>
+<li><p>Paste the path to the folder in which <code class="docutils literal notranslate"><span class="pre">doxygen.exe</span></code> is located. If not changed manually, this should be <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\doxygen\bin</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">\doxygen.exe</span></code> is omitted.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> on all open windows.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Check if <code class="docutils literal notranslate"><span class="pre">Doxygen</span></code> is setup correctly.</dt><dd><ol class="arabic simple">
+<li><p>Open the Command Prompt.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">doxygen</span></code>. If setup correctly, it should show the path to <code class="docutils literal notranslate"><span class="pre">doxygen.exe</span></code>.</p></li>
+<li><p>If it says <code class="docutils literal notranslate"><span class="pre">INFO:</span> <span class="pre">Could</span> <span class="pre">not</span> <span class="pre">find</span> <span class="pre">files</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">given</span> <span class="pre">pattern(s).</span></code>, repeat steps 2 and 3. Make sure you copy the path to the folder where <code class="docutils literal notranslate"><span class="pre">doxygen.exe</span></code> is located.</p></li>
+<li><p>Close the Command Prompt.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="download-and-setup-python">
+<h4><span class="section-number">1.2.4.2. </span>Download and setup Python<a class="headerlink" href="#download-and-setup-python" title="Permalink to this headline"></a></h4>
+<ol class="arabic simple">
+<li><p>Download <code class="docutils literal notranslate"><span class="pre">Python</span></code> <a class="reference external" href="https://www.python.org/downloads/">here</a>. The tool is tested with <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.9</span></code> and <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.10</span></code>, so it is strongly recommended to use one of these.</p></li>
+<li><p>In the installer, make sure you check the box <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Python</span> <span class="pre">[version]</span> <span class="pre">to</span> <span class="pre">PATH</span></code>. Unless you want a specific installation, choose <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">now</span></code>.</p></li>
+<li><dl class="simple">
+<dt>Check if <code class="docutils literal notranslate"><span class="pre">Python</span></code> is setup correctly.</dt><dd><ol class="arabic simple">
+<li><p>Open the Command Prompt.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code>. If setup correctly, it should show the path to <code class="docutils literal notranslate"><span class="pre">python.exe</span></code>.</p></li>
+<li><p>If it says <code class="docutils literal notranslate"><span class="pre">INFO:</span> <span class="pre">Could</span> <span class="pre">not</span> <span class="pre">find</span> <span class="pre">files</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">given</span> <span class="pre">pattern(s).</span></code>, try setting the <code class="docutils literal notranslate"><span class="pre">Path</span></code> variable manually (step 2 of <a class="reference internal" href="#download-and-setup-doxygen"><span class="std std-ref">Download and setup Doxygen</span></a>).</p></li>
+<li><p>Close the Command Prompt.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="download-and-setup-python-modules">
+<h4><span class="section-number">1.2.4.3. </span>Download and setup Python modules<a class="headerlink" href="#download-and-setup-python-modules" title="Permalink to this headline"></a></h4>
+<ol class="arabic simple">
+<li><p>Open the Command Prompt.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code>. Follow the instructions of the terminal.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">breathe</span></code>. Follow the instructions of the terminal.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx_rtd_theme</span></code>. Follow the instructions of the terminal.</p></li>
+</ol>
+</section>
+<section id="generate-documentation">
+<h4><span class="section-number">1.2.4.4. </span>Generate documentation<a class="headerlink" href="#generate-documentation" title="Permalink to this headline"></a></h4>
+<ol class="arabic simple">
+<li><p>Open the Command Prompt.</p></li>
+<li><p>Navigate to the source code, then <code class="docutils literal notranslate"><span class="pre">docs/</span></code>.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">doxygen</span></code>. When successful, it should end with <code class="docutils literal notranslate"><span class="pre">finished...</span></code>.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">html</span> <span class="pre">source</span> <span class="pre">build</span></code>. When successful, it should end with <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">HTML</span> <span class="pre">pages</span> <span class="pre">are</span> <span class="pre">in</span> <span class="pre">build.</span></code>.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="support">
+<h2><span class="section-number">1.3. </span>Support<a class="headerlink" href="#support" title="Permalink to this headline"></a></h2>
+<p>Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="﻿EasyScaner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pyscaner.html" class="btn btn-neutral float-right" title="2. Python API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, TU Delft.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

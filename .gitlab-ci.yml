@@ -1,0 +1,31 @@
+image: pavelverigo/cse2000
+
+# Build library to object file
+build-job:
+  stage: build
+  script:
+    - cmake -S . -B build
+    - cmake --build build --target EasyScaner
+
+# clang-format on all files in repository
+clang-format:
+  stage: test
+  script:
+    - find . \( -name '*.hpp' -or -name '*.cpp' \) -print0 | xargs -0 clang-format --dry-run --Werror
+  allow_failure: true
+
+# Make enviroment for clang-tidy (exporting compile commands), then running clang-tidy
+clang-tidy:
+  stage: test
+  script:
+    - cmake -S . -B build -G "Unix Makefiles" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+    - find ./EasyScaner/ \( -name '*.hpp' -or -name '*.cpp' \) -print0 | xargs -0 clang-tidy -p build --warnings-as-errors=* 
+  allow_failure: true
+
+# Compiles Google Test and executes it
+gtest:
+  stage: test
+  script:
+    - cmake -S . -B build
+    - cmake --build build --target mytest
+    - build/mytest

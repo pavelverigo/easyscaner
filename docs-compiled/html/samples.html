@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Samples &mdash; QuickScaner 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. ﻿FAQ / Troubleshooting" href="faq.html" />
+    <link rel="prev" title="3. C++ API" href="cpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QuickScaner
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. ﻿Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#about">1.1. About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#setup">1.2. Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#visual-studio">1.2.1. Visual Studio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#use-executables">1.2.2. Use executables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#use-python">1.2.3. Use Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#build-documentation">1.2.4. Build documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="intro.html#download-and-setup-doxygen">1.2.4.1. Download and setup Doxygen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="intro.html#download-and-setup-python">1.2.4.2. Download and setup Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="intro.html#download-and-setup-python-modules">1.2.4.3. Download and setup Python modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="intro.html#generate-documentation">1.2.4.4. Generate documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#support">1.3. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyscaner.html">2. Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.API.html">2.1. pyscaner.API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.SensorWaitMode.html">2.2. pyscaner.SensorWaitMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.Vehicle.html">2.3. pyscaner.Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.VType.html">2.4. pyscaner.VType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.CruiseControlMode.html">2.5. pyscaner.CruiseControlMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.Indicator.html">2.6. pyscaner.Indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.LightsInfo.html">2.7. pyscaner.LightsInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generate_autosummary/pyscaner.NumericalCommand.html">2.8. pyscaner.NumericalCommand</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cpp.html">3. C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpp.html#vehicle">3.1. Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp.html#scaner">3.2. Scaner</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Samples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-samples">4.1. Python samples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getinfo-py">4.1.1. <code class="docutils literal notranslate"><span class="pre">getinfo.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-lane-py">4.1.2. <code class="docutils literal notranslate"><span class="pre">change_lane.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decelerate-py">4.1.3. <code class="docutils literal notranslate"><span class="pre">decelerate.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-message-py">4.1.4. <code class="docutils literal notranslate"><span class="pre">display_message.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#idm-py">4.1.5. <code class="docutils literal notranslate"><span class="pre">IDM+.py</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#c-samples">4.2. C++ samples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changelane-cpp">4.2.1. <code class="docutils literal notranslate"><span class="pre">ChangeLane.cpp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decelerate-cpp">4.2.2. <code class="docutils literal notranslate"><span class="pre">Decelerate.cpp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#helloworld-cpp">4.2.3. <code class="docutils literal notranslate"><span class="pre">HelloWorld.cpp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#idm-cpp">4.2.4. <code class="docutils literal notranslate"><span class="pre">IDM+.cpp</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">5. ﻿FAQ / Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#difference-between-vehicles-and-road-vehicles-in-api">5.1. Difference between <code class="docutils literal notranslate"><span class="pre">vehicles</span></code> and <code class="docutils literal notranslate"><span class="pre">road_vehicles</span></code> in API.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#modulenotfounderror-no-module-named-pyscaner">5.2. ModuleNotFoundError: No module named ‘pyscaner’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#cmake-studio-dir-environment-varible-is-not-found">5.3. CMake STUDIO_DIR environment varible is not found.</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QuickScaner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">4. </span>Samples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/samples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="samples">
+<h1><span class="section-number">4. </span>Samples<a class="headerlink" href="#samples" title="Permalink to this headline"></a></h1>
+<p>We have created C++ and Python samples. You can go through the samples below.</p>
+<section id="python-samples">
+<h2><span class="section-number">4.1. </span>Python samples<a class="headerlink" href="#python-samples" title="Permalink to this headline"></a></h2>
+<section id="getinfo-py">
+<h3><span class="section-number">4.1.1. </span><code class="docutils literal notranslate"><span class="pre">getinfo.py</span></code><a class="headerlink" href="#getinfo-py" title="Permalink to this headline"></a></h3>
+<p>Show basic functionality of Python bindings</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import module</span>
+<span class="kn">import</span> <span class="nn">pyscaner</span>
+
+<span class="c1"># Create API object (process_name, config_name, frequency in hz)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">pyscaner</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="s2">&quot;EASYSCANER&quot;</span><span class="p">,</span> <span class="s2">&quot;CONFIG&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+  <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Define the loop function</span>
+<span class="k">def</span> <span class="nf">running</span><span class="p">():</span>
+  <span class="n">v0</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Get vehicle with ID 0</span>
+
+  <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vehicle with id 0 speed (km/h): </span><span class="si">{</span><span class="mf">3.6</span> <span class="o">*</span> <span class="n">v0</span><span class="o">.</span><span class="n">get_speed</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+  <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is road vehicle id 0: </span><span class="si">{</span><span class="n">api</span><span class="o">.</span><span class="n">is_road_vehicle</span><span class="p">(</span><span class="n">v0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+  <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vehicle count: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">get_road_vehicles</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">vhl</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">get_road_vehicles</span><span class="p">():</span>
+
+    <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vehicle </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span><span class="si">}</span><span class="s2"> (type </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_type</span><span class="p">()</span><span class="si">}</span><span class="s2">):&quot;</span><span class="p">)</span>
+
+    <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Position: </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_pos</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Speed: </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_speed</span><span class="p">()</span><span class="si">}</span><span class="s2">m/s&quot;</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Acceleration: </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_accel</span><span class="p">()</span><span class="si">}</span><span class="s2">m/s/s&quot;</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Direction: </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_direction</span><span class="p">()</span><span class="si">}</span><span class="s2"> (Wheel angle: </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_wheel_angle</span><span class="p">()</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+    <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This vehicle is in road </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_road</span><span class="p">()</span><span class="si">}</span><span class="s2">, lane </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_lane</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">vhl</span><span class="o">.</span><span class="n">in_intersection</span><span class="p">():</span>
+        <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;At intersection </span><span class="si">{</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_intersection</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">in_front</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicle_in_front</span><span class="p">(</span><span class="n">vhl</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">in_front</span><span class="p">:</span>
+        <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">api</span><span class="o">.</span><span class="n">get_headway</span><span class="p">(</span><span class="n">vhl</span><span class="p">,</span> <span class="n">in_front</span><span class="p">)</span><span class="si">}</span><span class="s2">m behind vehicle </span><span class="si">{</span><span class="n">in_front</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">sign</span> <span class="o">=</span> <span class="n">vhl</span><span class="o">.</span><span class="n">get_nearest_road_sign_in_lane</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">sign</span><span class="p">:</span>
+        <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The road sign </span><span class="si">{</span><span class="n">sign</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> (type: </span><span class="si">{</span><span class="n">sign</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2">, value: </span><span class="si">{</span><span class="n">sign</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">) has been detected </span><span class="si">{</span><span class="n">sign</span><span class="o">.</span><span class="n">distance</span><span class="si">}</span><span class="s2">m from this vehicle&quot;</span><span class="p">)</span>
+    
+    <span class="n">tflight</span> <span class="o">=</span> <span class="n">vhl</span><span class="o">.</span><span class="n">get_nearest_traffic_light_in_lane</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">tflight</span><span class="p">:</span>
+        <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The traffic light </span><span class="si">{</span><span class="n">tflight</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> (color: </span><span class="si">{</span><span class="n">tflight</span><span class="o">.</span><span class="n">color</span><span class="si">}</span><span class="s2">, flashing: </span><span class="si">{</span><span class="n">tflight</span><span class="o">.</span><span class="n">flashing</span><span class="si">}</span><span class="s2">) has been detected </span><span class="si">{</span><span class="n">tflight</span><span class="o">.</span><span class="n">distance</span><span class="si">}</span><span class="s2">m from this vehicle&quot;</span><span class="p">)</span>
+
+    <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;======================================================================&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set callbacks</span>
+<span class="n">api</span><span class="o">.</span><span class="n">while_running</span><span class="p">(</span><span class="n">running</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">on_init</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="change-lane-py">
+<h3><span class="section-number">4.1.2. </span><code class="docutils literal notranslate"><span class="pre">change_lane.py</span></code><a class="headerlink" href="#change-lane-py" title="Permalink to this headline"></a></h3>
+<p>Functionality of changing lane</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import module</span>
+<span class="kn">import</span> <span class="nn">pyscaner</span>
+
+<span class="c1"># Create API object</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">pyscaner</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="s2">&quot;EASYSCANER&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT_1.9&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">tick</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Define the initialisation function</span>
+<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicles</span><span class="p">():</span>
+        <span class="n">v</span><span class="o">.</span><span class="n">try_pull_out</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All vehicles were asked to pull out&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set the initialisation function</span>
+<span class="n">api</span><span class="o">.</span><span class="n">on_init</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+
+<span class="c1"># Define the loop function</span>
+<span class="k">def</span> <span class="nf">running</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">tick</span>
+    <span class="n">tick</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tick</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">tick</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicles</span><span class="p">():</span>
+            <span class="n">v</span><span class="o">.</span><span class="n">try_filter_in</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All vehicles were asked to filter in&quot;</span><span class="p">)</span>
+        <span class="n">api</span><span class="o">.</span><span class="n">while_running</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Set the loop function</span>
+<span class="n">api</span><span class="o">.</span><span class="n">while_running</span><span class="p">(</span><span class="n">running</span><span class="p">)</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="decelerate-py">
+<h3><span class="section-number">4.1.3. </span><code class="docutils literal notranslate"><span class="pre">decelerate.py</span></code><a class="headerlink" href="#decelerate-py" title="Permalink to this headline"></a></h3>
+<p>Get vehicle speeds, and command acceleration profile</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import module</span>
+<span class="kn">import</span> <span class="nn">pyscaner</span>
+
+<span class="c1"># Create API object</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">pyscaner</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="s2">&quot;EASYSCANER&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT_1.9&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Define the initialisation function</span>
+<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicles</span><span class="p">():</span>
+        <span class="n">v</span><span class="o">.</span><span class="n">set_accel</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All vehicles were asked to accelerate&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set the initialisation function</span>
+<span class="n">api</span><span class="o">.</span><span class="n">on_init</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+
+<span class="c1"># Define the loop function</span>
+<span class="k">def</span> <span class="nf">running</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicles</span><span class="p">():</span>
+        <span class="n">speed</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">get_speed</span><span class="p">()</span>
+        <span class="n">accel_command</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">get_accel_command</span><span class="p">()</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">accel_command</span><span class="o">.</span><span class="n">active</span><span class="p">):</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">speed</span> <span class="o">&gt;</span> <span class="mi">20</span> <span class="ow">and</span> <span class="n">accel_command</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">v</span><span class="o">.</span><span class="n">set_accel</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Started decelerating&quot;</span><span class="p">,</span> <span class="n">v</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span>
+
+            <span class="k">elif</span><span class="p">(</span><span class="n">speed</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">accel_command</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">v</span><span class="o">.</span><span class="n">reset_accel</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="s2">&quot;has come to a stop&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set the loop function</span>
+<span class="n">api</span><span class="o">.</span><span class="n">while_running</span><span class="p">(</span><span class="n">running</span><span class="p">)</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="display-message-py">
+<h3><span class="section-number">4.1.4. </span><code class="docutils literal notranslate"><span class="pre">display_message.py</span></code><a class="headerlink" href="#display-message-py" title="Permalink to this headline"></a></h3>
+<p>Display text on screen</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import module</span>
+<span class="kn">import</span> <span class="nn">pyscaner</span>
+
+<span class="c1"># Create API object (process_name, config_name, frequency in hz)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">pyscaner</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="s2">&quot;EASYSCANER&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT_1.9&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+  <span class="k">pass</span>
+
+<span class="c1"># Define the loop function</span>
+<span class="k">def</span> <span class="nf">running</span><span class="p">():</span>
+  <span class="n">v0</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Get vehicle with ID 0</span>
+  <span class="n">time</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">display_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello Right </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;RIGHT</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">display_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello Left </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;LEFT</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+  <span class="n">time</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
+  <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time: </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set callbacks</span>
+<span class="n">api</span><span class="o">.</span><span class="n">while_running</span><span class="p">(</span><span class="n">running</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">on_init</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="idm-py">
+<h3><span class="section-number">4.1.5. </span><code class="docutils literal notranslate"><span class="pre">IDM+.py</span></code><a class="headerlink" href="#idm-py" title="Permalink to this headline"></a></h3>
+<p>IDM+ model</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import module</span>
+<span class="kn">import</span> <span class="nn">pyscaner</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c1"># Create API object</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">pyscaner</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="s2">&quot;EASYSCANER&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT_1.9&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Define IDM+ model as a function</span>
+<span class="k">def</span> <span class="nf">idm_plus</span><span class="p">(</span><span class="n">vhl</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">v_0</span><span class="p">,</span> <span class="n">s_0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">in_front</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicle_in_front</span><span class="p">(</span><span class="n">vhl</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">in_front</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">vhl</span><span class="o">.</span><span class="n">in_intersection</span><span class="p">()):</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">vhl</span><span class="o">.</span><span class="n">get_speed</span><span class="p">()</span>
+        <span class="n">dv</span> <span class="o">=</span> <span class="n">in_front</span><span class="o">.</span><span class="n">get_speed</span><span class="p">()</span> <span class="o">-</span> <span class="n">v</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_headway</span><span class="p">(</span><span class="n">vhl</span><span class="p">,</span> <span class="n">in_front</span><span class="p">)</span>
+        <span class="n">s_star</span> <span class="o">=</span> <span class="n">s_0</span> <span class="o">+</span> <span class="p">(</span><span class="n">v</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">v</span> <span class="o">*</span> <span class="n">dv</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">))</span>
+
+        <span class="n">accel</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="nb">min</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">v</span> <span class="o">/</span> <span class="n">v_0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">s_star</span> <span class="o">/</span> <span class="n">s</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">vhl</span><span class="o">.</span><span class="n">set_accel</span><span class="p">(</span><span class="n">accel</span><span class="p">)</span>
+        <span class="n">api</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">vhl</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot; is following &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">in_front</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot; with acceleration &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">accel</span><span class="p">))</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">vhl</span><span class="o">.</span><span class="n">reset_accel</span><span class="p">()</span>
+
+<span class="c1"># Define the loop function</span>
+<span class="k">def</span> <span class="nf">running</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">get_vehicles</span><span class="p">():</span>
+        <span class="n">idm_plus</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">80</span> <span class="o">/</span> <span class="mf">3.6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="c1"># Set the loop function</span>
+<span class="n">api</span><span class="o">.</span><span class="n">while_running</span><span class="p">(</span><span class="n">running</span><span class="p">)</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="c-samples">
+<h2><span class="section-number">4.2. </span>C++ samples<a class="headerlink" href="#c-samples" title="Permalink to this headline"></a></h2>
+<section id="changelane-cpp">
+<h3><span class="section-number">4.2.1. </span><code class="docutils literal notranslate"><span class="pre">ChangeLane.cpp</span></code><a class="headerlink" href="#changelane-cpp" title="Permalink to this headline"></a></h3>
+<p>Ask all vehicles to move a lane to the left on the start, and move to the right 5 ticks later.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Include EasyScaner files</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EasyScaner/Scaner.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EasyScaner/Vehicle.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// Main function; setup goes here</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Create Scaner object</span>
+<span class="w">  </span><span class="n">Scaner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scaner</span><span class="p">(</span><span class="s">&quot;EASYSCANER&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CONFIG&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">tick</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Set the initialisation function</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">on_init</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">tick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vhl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">get_road_vehicles</span><span class="p">())</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">try_pull_out</span><span class="p">();</span><span class="w">  </span><span class="c1">// Ask each vehicle to move a lane to the left</span>
+<span class="w">    </span><span class="n">sc</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;All vehicles have been ordered to move to the lane on their left.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Set the loop function</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">while_running</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tick</span><span class="o">++</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                                               </span><span class="c1">// If 5 SCANeR loops have passed</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vhl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">get_road_vehicles</span><span class="p">())</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">try_filter_in</span><span class="p">();</span><span class="w">  </span><span class="c1">// Ask each vehicle to move a lane to the right</span>
+<span class="w">      </span><span class="n">sc</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;All vehicles have been ordered to move to the lane on their right.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">sc</span><span class="p">.</span><span class="n">while_running</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{});</span><span class="w">  </span><span class="c1">// Stop the loop from running by setting an empty function as callback</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Run the tool</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">run</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="decelerate-cpp">
+<h3><span class="section-number">4.2.2. </span><code class="docutils literal notranslate"><span class="pre">Decelerate.cpp</span></code><a class="headerlink" href="#decelerate-cpp" title="Permalink to this headline"></a></h3>
+<p>All vehicles accelerate at the start. When they reach a speed of 20 m/s, they will gradually decelerate.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Allow printing to console</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="c1">// Include EasyScaner files</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EasyScaner/Scaner.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EasyScaner/Vehicle.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// Main function; setup goes here</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Create Scaner object</span>
+<span class="w">  </span><span class="n">Scaner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scaner</span><span class="p">(</span><span class="s">&quot;EASYSCANER&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CONFIG&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Set the initialisation function</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">on_init</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vhl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">get_road_vehicles</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">set_accel</span><span class="p">(</span><span class="mf">5.0f</span><span class="p">);</span><span class="w">  </span><span class="c1">// Accelerate at 5 m/s^2</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Accelerating all vehicles&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Set the loop function</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">while_running</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vhl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">get_road_vehicles</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Get speed and acceleration command</span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_speed</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="n">numerical_command</span><span class="w"> </span><span class="n">accel_command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_accel_command</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// If an acceleration command is active</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">accel_command</span><span class="p">.</span><span class="n">active</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// If speed is above 20 m/s and acceleration is above 0 m/s</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">speed</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20.0f</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">accel_command</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Start decelerating at a rate of 2 m/s^2</span>
+<span class="w">          </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">set_accel</span><span class="p">(</span><span class="mf">-2.0f</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Decelerating vehicle &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Else if speed is 0 m/s and acceleration is below 0 m/s (a.k.a. decelerating)</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">speed</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.0f</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">accel_command</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Set acceleration to 0 m/s^2</span>
+<span class="w">          </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">reset_accel</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Vehicle &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; has come to a halt, resetting acceleration&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Run the tool</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">run</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="helloworld-cpp">
+<h3><span class="section-number">4.2.3. </span><code class="docutils literal notranslate"><span class="pre">HelloWorld.cpp</span></code><a class="headerlink" href="#helloworld-cpp" title="Permalink to this headline"></a></h3>
+<p>Logs a lot of data.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Allow printing to console</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="c1">// Include EasyScaner files</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EasyScaner/Scaner.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EasyScaner/Vehicle.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// Custom function for printing info</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">print_vehicle_info</span><span class="p">(</span><span class="n">Vehicle</span><span class="o">*</span><span class="w"> </span><span class="n">vhl</span><span class="p">,</span><span class="w"> </span><span class="n">Scaner</span><span class="o">*</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// If the vehicle&#39;s engine is running</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_engine_status</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Print its position</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_pos</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Position: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Print its speed, acceleration, and wheel angle</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Speed: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_speed</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m/s&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Acceleration: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_accel</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m/s/s&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Wheel angle: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_wheel_angle</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; radians&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Print in what lane the vehicle is in, and the distance to the next vehicle in this lane</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;This vehicle is in road &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_road</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, lane &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_lane</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">in_intersection</span><span class="p">())</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;At intersection &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_intersection</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vehicle</span><span class="o">*</span><span class="w"> </span><span class="n">in_front</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="o">-&gt;</span><span class="n">get_vehicle_in_front</span><span class="p">(</span><span class="n">vhl</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">in_front</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sc</span><span class="o">-&gt;</span><span class="n">get_headway</span><span class="p">(</span><span class="n">vhl</span><span class="p">,</span><span class="w"> </span><span class="n">in_front</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m behind vehicle &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">in_front</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Print information about the nearest road sign to the vehicle, if one was detected</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">road_sign</span><span class="o">*</span><span class="w"> </span><span class="n">sign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_nearest_road_sign_in_lane</span><span class="p">())</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The road sign &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sign</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (type: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sign</span><span class="o">-&gt;</span><span class="n">type</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;) has been detected &quot;</span><span class="w"></span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sign</span><span class="o">-&gt;</span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m from this vehicle&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Print information about the nearest traffic light to the vehicle, if one was detected</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">traffic_light</span><span class="o">*</span><span class="w"> </span><span class="n">tflight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_nearest_traffic_light_in_lane</span><span class="p">())</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The traffic light &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tflight</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (color: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tflight</span><span class="o">-&gt;</span><span class="n">color</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;) has been detected &quot;</span><span class="w"></span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tflight</span><span class="o">-&gt;</span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m from this vehicle&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Print indicator status if applicable</span>
+<span class="w">    </span><span class="n">indicator</span><span class="w"> </span><span class="n">ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_indicator</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ind</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LEFT</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Signalling left&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ind</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">RIGHT</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Signalling right&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ind</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">INDICATOR_OFF</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Undefined indicator position!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Print if the horn is being sound</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_horn</span><span class="p">())</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Horn is on&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Print cruise control mode if applicable</span>
+<span class="w">    </span><span class="n">cruise_control</span><span class="w"> </span><span class="n">cc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_cruise_control</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CRUISE_CONTROL</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Cruise control is on with target speed: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cc</span><span class="p">.</span><span class="n">target</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m/s&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SPEED_LIMITER</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The speed limiter is on with top speed: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cc</span><span class="p">.</span><span class="n">target</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m/s&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">CRUISE_CONTROL_OFF</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Undefined cruise control mode!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Print lights status if applicable (note that the indicator lights are NOT the same as the indicator status above)</span>
+<span class="w">    </span><span class="n">lights</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_lights</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">left_indicator</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The left indicator light is on&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">right_indicator</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The right indicator light is on&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">stop_lights</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The stop lights are on&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// If the vehicle&#39;s engine is not running</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;This vehicle&#39;s engine is not running&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Print horizontal divider</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;======================================================================&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Main function; setup goes here</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Create Scaner object</span>
+<span class="w">  </span><span class="n">Scaner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scaner</span><span class="p">(</span><span class="s">&quot;EASYSCANER&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CONFIG&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Set the initialisation function</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">on_init</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;Hello World! Vehicle information will be printed to the console.&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Set the loop function</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">while_running</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// go though all vehicles</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vhl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">get_road_vehicles</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World! We are looking at the vehicle with ID: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (type &quot;</span><span class="w"></span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_type</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">print_vehicle_info</span><span class="p">(</span><span class="n">vhl</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sc</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Set the vehicle_added listener function</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">on_vehicle_added</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">Vehicle</span><span class="o">*</span><span class="w"> </span><span class="n">vhl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;A new vehicle has been added with ID: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vehicle_info</span><span class="p">(</span><span class="n">vhl</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sc</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Run the tool</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">run</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="idm-cpp">
+<h3><span class="section-number">4.2.4. </span><code class="docutils literal notranslate"><span class="pre">IDM+.cpp</span></code><a class="headerlink" href="#idm-cpp" title="Permalink to this headline"></a></h3>
+<p>Implements the IDM+ model.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Include EasyScaner files</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EasyScaner/Scaner.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EasyScaner/Vehicle.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// Custom function for applying IDM+ model</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">idm_plus</span><span class="p">(</span><span class="n">Vehicle</span><span class="o">*</span><span class="w"> </span><span class="n">vhl</span><span class="p">,</span><span class="w"> </span><span class="n">Scaner</span><span class="o">*</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">v_0</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">s_0</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Get the vehicle in front</span>
+<span class="w">  </span><span class="n">Vehicle</span><span class="o">*</span><span class="w"> </span><span class="n">in_front</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="o">-&gt;</span><span class="n">get_vehicle_in_front</span><span class="p">(</span><span class="n">vhl</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// If there&#39;s a vehicle in front, apply IDM+</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">in_front</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">in_intersection</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">get_speed</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">dv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in_front</span><span class="o">-&gt;</span><span class="n">get_speed</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="o">-&gt;</span><span class="n">get_headway</span><span class="p">(</span><span class="n">vhl</span><span class="p">,</span><span class="w"> </span><span class="n">in_front</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Ignore vehicles which are too far</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">reset_accel</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">s_star</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s_0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dv</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">accel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">min</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pow</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">v_0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pow</span><span class="p">(</span><span class="n">s_star</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">set_accel</span><span class="p">(</span><span class="n">accel</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Else, set acceleration to 0</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">vhl</span><span class="o">-&gt;</span><span class="n">reset_accel</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Main function; setup goes here</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Create Scaner object</span>
+<span class="w">  </span><span class="n">Scaner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scaner</span><span class="p">(</span><span class="s">&quot;EASYSCANER&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CONFIG&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Set the loop function</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">while_running</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Apply the IDM+ model to each vehicle</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vhl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">get_road_vehicles</span><span class="p">())</span><span class="w"> </span><span class="n">idm_plus</span><span class="p">(</span><span class="n">vhl</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sc</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3.6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Run the tool</span>
+<span class="w">  </span><span class="n">sc</span><span class="p">.</span><span class="n">run</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cpp.html" class="btn btn-neutral float-left" title="3. C++ API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="5. ﻿FAQ / Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, TU Delft.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

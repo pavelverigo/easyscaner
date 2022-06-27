@@ -1,0 +1,10 @@
+build/
+.vs/
+.vscode/
+CMakeSettings.json
+doxygen/
+scenarios/
+
+# Autodoc artifact in source
+_generate_autosummary
+*.egg
